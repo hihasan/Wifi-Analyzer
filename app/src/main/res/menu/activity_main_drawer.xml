@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_access"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Access Points" />
+        <item
             android:id="@+id/nav_contour"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Contour Graph" />
