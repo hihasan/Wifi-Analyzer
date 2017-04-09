@@ -20,17 +20,17 @@ import java.util.ArrayList;
  */
 
 public class WifiRecyclerViewAdapter extends RecyclerView.Adapter<WifiRecyclerViewAdapter.ViewHolder> {
-    ArrayList<String> wifiListModels;
+    ArrayList<String> wifiListModel;
     TextView wifiNameTxt;
     Activity activity;
     String TAG = "WifiRecyclerViewAdapter";
     CardView cardView;
     String[] splitValue;
 
-    public WifiRecyclerViewAdapter(Activity activity, ArrayList<String> wifiListModels) {
+    public WifiRecyclerViewAdapter(Activity activity, ArrayList<String> wifiListModel) {
 
         this.activity = activity;
-        this.wifiListModels = wifiListModels;
+        this.wifiListModel = wifiListModel;
 
     }
 
@@ -47,8 +47,8 @@ public class WifiRecyclerViewAdapter extends RecyclerView.Adapter<WifiRecyclerVi
 
     @Override
     public void onBindViewHolder(WifiRecyclerViewAdapter.ViewHolder holder, final int position) {
-        Log.e(TAG, "list" + wifiListModels.get(position));
-        String ssid = wifiListModels.get(position).toString();
+        Log.e(TAG, "list" + wifiListModel.get(position));
+        String ssid = wifiListModel.get(position).toString();
         Log.e(TAG, "ssid " + ssid);
         splitValue = ssid.split(",");
         wifiNameTxt.setText(splitValue[0]);
@@ -57,7 +57,7 @@ public class WifiRecyclerViewAdapter extends RecyclerView.Adapter<WifiRecyclerVi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, ShowDetailsActivity.class);
-                intent.putExtra("values", wifiListModels.get(position).toString());
+                intent.putExtra("values", wifiListModel.get(position).toString());
                 activity.startActivity(intent);
 
             }
@@ -68,7 +68,7 @@ public class WifiRecyclerViewAdapter extends RecyclerView.Adapter<WifiRecyclerVi
 
     @Override
     public int getItemCount() {
-        return wifiListModels.size();
+        return wifiListModel.size();
     }
 
 

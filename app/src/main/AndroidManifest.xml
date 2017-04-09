@@ -25,7 +25,9 @@
 
         <activity android:name=".accesspoint.AccessPoint"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".accesspoint.ShowDetailsActivity"/>
+        <activity
+            android:name=".accesspoint.ShowDetailsActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

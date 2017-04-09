@@ -24,7 +24,7 @@ import java.util.List;
 
 public class AccessPoint extends AppCompatActivity {
     RecyclerView wifiRecycleView;
-    ArrayList<String> wifiListModels = new ArrayList<>();
+    ArrayList<String> wifiListModel = new ArrayList<>();
     WifiManager wifiManager;
     List<ScanResult> scanList;
     private StringBuilder sb = new StringBuilder();
@@ -74,10 +74,10 @@ public class AccessPoint extends AppCompatActivity {
 //                    sb.append(new Integer(i + 1).toString() + ". ");
 //                    sb.append((scanList.get(i)).toString());
 //                    sb.append("\n\n");
-                    wifiListModels.add(scanList.get(i).toString());
+                    wifiListModel.add(scanList.get(i).toString());
                 }
                 Log.e(TAG, "sb " + scanList.size());
-                WifiRecyclerViewAdapter adapter = new WifiRecyclerViewAdapter(AccessPoint.this, wifiListModels);
+                WifiRecyclerViewAdapter adapter = new WifiRecyclerViewAdapter(AccessPoint.this, wifiListModel);
                 wifiRecycleView.setAdapter(adapter);
                 wifiRecycleView.getAdapter().notifyDataSetChanged();
 

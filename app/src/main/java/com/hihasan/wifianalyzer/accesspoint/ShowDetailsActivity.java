@@ -1,7 +1,7 @@
 package com.hihasan.wifianalyzer.accesspoint;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -10,8 +10,7 @@ import com.hihasan.wifianalyzer.R;
 /**
  */
 
-public class ShowDetailsActivity extends AppCompatActivity
-{
+public class ShowDetailsActivity extends Activity {
     String TAG = "ShowDetailsActivity";
     String[] splitValue;
     String[] splitValue2;
