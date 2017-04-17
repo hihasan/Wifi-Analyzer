@@ -1,6 +1,5 @@
 package com.hihasan.wifianalyzer;
 
-import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ListView;
-
-import com.hihasan.wifianalyzer.accesspoint.AccessPoint;
 
 import java.util.HashMap;
 import java.util.List;
@@ -72,8 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_access)
         {
            // Toast.makeText(getApplicationContext(),"This is access Point",Toast.LENGTH_SHORT).show();
-            Intent n=new Intent(MainActivity.this, AccessPoint.class);
-            startActivity(n);
+            //
         }
 
         else if (id==R.id.nav_contour)

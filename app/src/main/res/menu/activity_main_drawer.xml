@@ -4,11 +4,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_access"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/ic_launcher"
             android:title="Access Points" />
         <item
             android:id="@+id/nav_contour"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/ic_launcher"
             android:title="Contour Graph" />
     </group>
 </menu>
