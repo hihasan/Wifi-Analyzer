@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/startalarm"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Start"/>
-
-
-    <TextView
-        android:id="@+id/value"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16sp"
+        android:layout_marginLeft="16sp"
+        android:text="Plot" />
+    <Button
+        android:id="@+id/cancelalarm"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_below="@+id/startalarm"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16sp"
+        android:layout_marginLeft="16sp"
+        android:text="Cancel" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cancelalarm"
+        android:layout_marginTop="16sp"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="450dp" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
